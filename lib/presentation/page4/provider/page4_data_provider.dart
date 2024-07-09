@@ -15,12 +15,13 @@ class Page4Data extends _$Page4Data {
   }
 
   Future getHuman() async {
-    // humanListProviderからランダムに一人取得
-    final humanList = ref.read(humanListProvider);
-    final randomHuman = humanList[Random().nextInt(humanList.length)];
 
     // providerの状態をローディングにしたい時の処理
     state = const AsyncValue.loading();
+
+    // humanListProviderからランダムに一人取得
+    final humanList = ref.read(humanListProvider);
+    final randomHuman = humanList[Random().nextInt(humanList.length)];
 
     // 今回は2秒間ローディング時間を設けるよう設計
     // 本番実装でのデータをとってきている間のイメージ
