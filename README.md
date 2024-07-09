@@ -1,13 +1,16 @@
 # riverpod_with_go_router_sample
 
 ## 準備
-- pubspec.yamlに各ライブラリを追加
+- [pubspec.yaml](https://github.com/sodateya/riverpod_with_go_router_sample/blob/main/pubspec.yaml)に各ライブラリを追加
 ```
- ・riverpod_annotation:
- ・flutter_riverpod:
- ・go_router:
- ・riverpod_generator:
-　　・build_runner: 
+dependencies:
+  riverpod_annotation:
+  flutter_riverpod:
+  go_router:
+
+dev_dependencies:
+ riverpod_generator:
+　　build_runner: 
 ```
 ## riverpod generatorファイルの作成方法 (foo.g.dartを生成)
 - riverpod generatorの定義
