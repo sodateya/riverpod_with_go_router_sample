@@ -10,7 +10,7 @@ class Page2Count extends _$Page2Count {
     return 0;
   }
 
-// プロバイダの更新したい場合は、メソッドに関数を定義できる
+// プロバイダの更新したい場合は、クラスでプロバイダを定義しているため、に関数を定義できる
 // プロバイダの値はstateに入っているのでstateを更新すると値をを更新できる
   void increment() {
     state = state + 1;
