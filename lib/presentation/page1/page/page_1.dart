@@ -9,6 +9,8 @@ class Page1 extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    //page２に渡すtitleを定義
+    const page2Title = 'Page 2';
     return Scaffold(
       appBar: AppBar(
         title: const Text('Page1'),
@@ -19,17 +21,18 @@ class Page1 extends ConsumerWidget {
             const PageContentText(
                 goRouterText: 'go_routerを使った基本的な画面遷移・値渡し\n(ここでは、次ページのtileを渡す)'),
             const GoRouterPathText(),
-            const SizedBox(height: 250),
+            const SizedBox(height: 160),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text('Page2に渡すタイトル: "$page2Title"'),
+            ),
             ElevatedButton(
                 onPressed: () {
-                  //page２に渡すtitleを定義
-                  const page2Title = 'Page 2';
-
                   //context.pushまたはcontext.goで遷移できる
                   //push:プッシュ遷移
                   //go:モーダル遷移
 
-                  //以下のように値をpathに含めると渡すことができる
+                  //以下のように値をpathに含めると渡すことができる　※routの定義方法はrouter.dartを参照
                   context.push('/page2$page2Title');
                 },
                 child: const Text('page２へ'))

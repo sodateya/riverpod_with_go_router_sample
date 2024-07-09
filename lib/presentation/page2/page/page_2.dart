@@ -25,7 +25,7 @@ class Page2 extends ConsumerWidget {
                   riverpodText: 'riverpodGeneratorを使った\n基本的な値の定義・更新',
                   goRouterText: '同じルート内での遷移'),
               const GoRouterPathText(),
-              const SizedBox(height: 80),
+              const SizedBox(height: 40),
               CountContainer(
                 countNum: count,
                 onAddTap: () {
@@ -38,7 +38,7 @@ class Page2 extends ConsumerWidget {
                   notifier.decrement();
                 },
               ),
-              const SizedBox(height: 64),
+              const SizedBox(height: 40),
               ElevatedButton(
                   onPressed: () {
                     //同じルート内のパスに遷移する際は以下のようにフルパスで遷移　　※同じルート内の意味はrouter.dart参照

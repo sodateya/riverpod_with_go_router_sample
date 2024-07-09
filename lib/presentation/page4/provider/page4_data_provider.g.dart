@@ -6,7 +6,21 @@ part of 'page4_data_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$page4DataHash() => r'e3c98c3ab94677237fb3155f4f248027db945f0d';
+String _$humanListHash() => r'5b3368aaa245c86d22698dffb4dca6fbc43307ec';
+
+/// See also [humanList].
+@ProviderFor(humanList)
+final humanListProvider = AutoDisposeProvider<List<Human>>.internal(
+  humanList,
+  name: r'humanListProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$humanListHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef HumanListRef = AutoDisposeProviderRef<List<Human>>;
+String _$page4DataHash() => r'abc968f5e518f5ad3ee2f3a340a1a9174e3a7c53';
 
 /// See also [Page4Data].
 @ProviderFor(Page4Data)

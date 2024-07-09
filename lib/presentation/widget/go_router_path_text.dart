@@ -12,12 +12,32 @@ class GoRouterPathText extends ConsumerWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'path : ${path.toString()}',
-          ),
-          Text(
-            'pathParameters : ${pathParameters.toString()}',
+          const Text('~go_router path info~'),
+          Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8), border: Border.all()),
+            width: double.infinity,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'path : ${path.toString()}',
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                    Text(
+                      'pathParameters : ${pathParameters.toString()}',
+                      style: const TextStyle(fontSize: 16),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ],
       ),

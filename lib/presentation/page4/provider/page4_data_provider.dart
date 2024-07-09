@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:riverpod_with_go_router_sample/presentation/page4/model/human.dart';
 
@@ -13,14 +15,19 @@ class Page4Data extends _$Page4Data {
   }
 
   Future getHuman() async {
+    // humanListProviderからランダムに一人取得
+    final humanList = ref.read(humanListProvider);
+    final randomHuman = humanList[Random().nextInt(humanList.length)];
+
     // providerの状態をローディングにしたい時の処理
     state = const AsyncValue.loading();
+
     // 今回は2秒間ローディング時間を設けるよう設計
     // 本番実装でのデータをとってきている間のイメージ
     await Future.delayed(const Duration(milliseconds: 2000));
     // 得られてデータに更新する
-    state = AsyncData(Human(name: 'Funbatter', age: 28));
-    print(state);
+    state = AsyncData(randomHuman);
+    print(state.value!.name);
   }
 
   Future getErrorHuman() async {
@@ -34,4 +41,25 @@ class Page4Data extends _$Page4Data {
       state = AsyncValue.error(e, stackTrace);
     }
   }
+}
+
+@riverpod
+List<Human> humanList(HumanListRef ref) {
+  return [
+    Human(name: 'Funbatter', age: 28),
+    Human(name: 'Jon', age: 18),
+    Human(name: 'Takashi', age: 68),
+    Human(name: 'Tanaka', age: 33),
+    Human(name: 'Alice', age: 24),
+    Human(name: 'Bob', age: 30),
+    Human(name: 'Charlie', age: 45),
+    Human(name: 'Dave', age: 50),
+    Human(name: 'Eve', age: 35),
+    Human(name: 'Frank', age: 29),
+    Human(name: 'Grace', age: 40),
+    Human(name: 'Heidi', age: 22),
+    Human(name: 'Ivan', age: 38),
+    Human(name: 'Judy', age: 27),
+    Human(name: 'Mallory', age: 55),
+  ];
 }
