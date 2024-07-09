@@ -9,7 +9,7 @@ part 'page4_data_provider.g.dart';
 class Page4Data extends _$Page4Data {
   @override
 
-  // buildメソッドにasync(非同期処理)にするとFutureProviderとして扱える　※build内に引数を持たせることも可能
+  // buildメソッドをasync(非同期処理)にするとFutureProviderとして扱える　※build内に引数を持たせることも可能
   Future<Human> build() async {
     return Human(name: 'noName', age: 0);
   }
