@@ -60,7 +60,7 @@ dev_dependencies:
   <details>
   　　　　<summary>値渡して遷移(pathParameters)</summary>
    　　　　 https://github.com/sodateya/riverpod_with_go_router_sample/blob/d95dcfd605711727930c2ee4a90b1da6476ae6c2/lib/router/provoder/router.dart#L44-L52
-      https://github.com/sodateya/riverpod_with_go_router_sample/blob/d95dcfd605711727930c2ee4a90b1da6476ae6c2/lib/presentation/page1/page/page_1.dart#L30-L37
+      https://github.com/sodateya/riverpod_with_go_router_sample/blob/f0d14ce860b81e78e81f85f598964cd2c38a1e50/lib/presentation/page1/page/page_1.dart#L30-L38
   </details>
   <details>
   　　　　<summary>値渡して遷移(extra)</summary>
@@ -102,11 +102,15 @@ dev_dependencies:
 </details>
 
 
-## サンプル画像
+## サンプル画像(モバイル)
 |page1|page2|page3|page4|page5|
 |--|--|--|--|--|
 |<img src="https://github.com/sodateya/riverpod_with_go_router_sample/assets/79615420/31ad2052-5050-4e3a-b232-d9cade71240c" width="300">|<img src="https://github.com/sodateya/riverpod_with_go_router_sample/assets/79615420/053da177-1f7d-442c-b023-6301a4c16d82" width="300">|<img src="https://github.com/sodateya/riverpod_with_go_router_sample/assets/79615420/82244e3d-5f7f-4497-bdff-5cd0615d2fd8" width="300">|<img src="https://github.com/sodateya/riverpod_with_go_router_sample/assets/79615420/97fab054-cb8a-4f86-8f06-f4fc1263b132" width="300">|<img src="https://github.com/sodateya/riverpod_with_go_router_sample/assets/79615420/c5928190-9330-4a39-a1f8-9222c1637197" width="300">|
 
+## サンプル(Web)
+※モバイルではpushで遷移しているところgoで遷移するよう変更しています（URLを反映させるため）
+
+　　https://riverpod-with-go-router.web.app/#/page1
 
 
 
