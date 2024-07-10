@@ -29,6 +29,7 @@ class Page1 extends ConsumerWidget {
             ElevatedButton(
                 onPressed: () {
                   //context.pushまたはcontext.goで遷移できる
+                  //goにするとwebでのURLにgo_routerのパスが反映される　※モバイル版では戻るボタンが表示されなくなるため注意
                   //push:プッシュ遷移
                   //go:モーダル遷移
 
