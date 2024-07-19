@@ -16,7 +16,7 @@ dev_dependencies:
 - riverpod generatorの定義
   
     ##### 詳細はソースコード参照
-  - NotifierProvider
+  - Provider
     - [page_2_count_provider.dart](https://github.com/sodateya/riverpod_with_go_router_sample/blob/main/lib/presentation/page2/provider/page_2_count_provider.dart)
   - FamilyProvider
     - [page_3_count_provider.dart](https://github.com/sodateya/riverpod_with_go_router_sample/blob/main/lib/presentation/page3/provider/page_3_count_provider.dart)
